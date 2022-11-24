@@ -13,7 +13,7 @@ const Review = ({ productData }) => {
     })
       .then(response => response.json())
       .then(data => setCurrReviewId(data.data));
-  }, []);
+  }, [setSearchParams]);
 
   return (
     <div className="Review">

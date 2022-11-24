@@ -87,7 +87,6 @@ const Leftside = ({ productData, searchParams, setSearchParams }) => {
       </div>
       <div className={!slideClick ? 'image-stack' : 'image-stack active'}>
         <img className="imgStack" src={productData.detail_image} />
-
         <div className="foled-button-down">
           <button className="fold-btn" onClick={handleToggle}>
             {!slideClick ? '상품설명 펼치기' : '상품설명 접기'}
