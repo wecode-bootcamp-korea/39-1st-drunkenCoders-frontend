@@ -39,7 +39,7 @@ const Login = () => {
         console.log(data);
         if (data.accessToken) {
           localStorage.setItem('token', data.accessToken);
-          navigate('/');
+          window.location.replace('/');
         } else {
           alert('아이디와 비밀번호를 확인해주세요!');
         }

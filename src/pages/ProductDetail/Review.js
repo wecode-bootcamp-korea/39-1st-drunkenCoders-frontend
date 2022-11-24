@@ -7,7 +7,7 @@ const Review = ({ productData }) => {
   const [currReviewId, setCurrReviewId] = useState([]);
 
   useEffect(() => {
-    fetch(`http://10.58.52.122:3000/comments/${productId}`, {
+    fetch(`http://10.58.52.122:3000/comments/product?productId=1`, {
       method: 'GET',
     })
       .then(response => response.json())
