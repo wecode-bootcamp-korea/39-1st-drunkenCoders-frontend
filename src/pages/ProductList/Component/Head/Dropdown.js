@@ -3,19 +3,13 @@ import './Dropdown.scss';
 
 const Dropdown = ({ searchParams, setSearchParams }) => {
   const [openList, setOpenList] = useState(false);
-  // const closeBtn = setOpenList(true);
-  // const openBtn = setOpenList(false);
 
-  //참
   const toggleHandler = () => {
     setOpenList(!openList);
   };
   const filterParams = (id, name) => {
     searchParams.append(name, id);
     setSearchParams(searchParams);
-    // setOpenList(!openList);
-
-    // true || flase;
   };
   return (
     <div className="drop-down-wrapper">
@@ -77,51 +71,51 @@ const filterList = [
     id: 2,
     title: '신맛',
     type: [
-      { id: 1, option: '약' },
-      { id: 2, option: '중' },
-      { id: 3, option: '강' },
+      { id: 1, option: '약', name: 'sourness' },
+      { id: 2, option: '중', name: 'sourness' },
+      { id: 3, option: '강', name: 'sourness' },
     ],
   },
   {
     id: 3,
     title: '탄산',
     type: [
-      { id: 1, option: '약' },
-      { id: 2, option: '중' },
-      { id: 3, option: '강' },
+      { id: 1, option: '약', name: 'carbon' },
+      { id: 2, option: '중', name: 'carbon' },
+      { id: 3, option: '강', name: 'carbon' },
     ],
   },
   {
     id: 4,
     title: '과일',
     type: [
-      { id: 1, option: '포도' },
-      { id: 2, option: '배' },
-      { id: 3, option: '매실' },
-      { id: 4, option: '사과' },
-      { id: 5, option: '베리' },
+      { id: 1, option: '포도', name: 'fruits' },
+      { id: 2, option: '배', name: 'fruits' },
+      { id: 3, option: '매실', name: 'fruits' },
+      { id: 4, option: '사과', name: 'fruits' },
+      { id: 5, option: '베리', name: 'fruits' },
     ],
   },
   {
     id: 5,
     title: '꽃',
     type: [
-      { id: 1, option: '국화' },
-      { id: 2, option: '유채' },
-      { id: 3, option: '동백꽃' },
-      { id: 4, option: '매화' },
-      { id: 5, option: '진달래' },
+      { id: 1, option: '국화', name: 'flowers' },
+      { id: 2, option: '유채', name: 'flowers' },
+      { id: 3, option: '동백꽃', name: 'flowers' },
+      { id: 4, option: '매화', name: 'flowers' },
+      { id: 5, option: '진달래', name: 'flowers' },
     ],
   },
   {
     id: 6,
     title: '곡물',
     type: [
-      { id: 1, option: '땅콩' },
-      { id: 2, option: '밤' },
-      { id: 3, option: '사탕수수' },
-      { id: 4, option: '고구마' },
-      { id: 5, option: '보리' },
+      { id: 1, option: '땅콩', name: 'grains' },
+      { id: 2, option: '밤', name: 'grains' },
+      { id: 3, option: '사탕수수', name: 'grains' },
+      { id: 4, option: '고구마', name: 'grains' },
+      { id: 5, option: '보리', name: 'grains' },
     ],
   },
   {
@@ -138,7 +132,7 @@ const filterList = [
     id: 8,
     title: '가격',
     type: [
-      { id: 1, option: '~ 1만원', name: 'price' },
+      { id: 1, option: '~ 1만원' },
       { id: 2, option: '1만원 ~ 3만원' },
       { id: 3, option: '3만원 ~ 5만원' },
       { id: 4, option: '5만원 ~ 10만원' },

@@ -48,7 +48,7 @@ const Register = () => {
     idValueChecked && pwValueChecked && pwRepeatChecked && !isDuplicate;
 
   const handleSignup = () => {
-    fetch('http://10.58.52.65:3000/users/register', {
+    fetch('http://10.58.52.122:3000/users/register', {
       method: 'POST',
       body: JSON.stringify({
         email: userInfo.useremail,
