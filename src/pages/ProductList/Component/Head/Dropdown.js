@@ -1,21 +1,17 @@
 import React, { useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
 import './Dropdown.scss';
 
-const Dropdown = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-
+const Dropdown = ({ searchParams, setSearchParams }) => {
   const [openList, setOpenList] = useState(false);
 
   //참
   // const toggleHandler = () => {
   //   setOpenList(!openList);
   // };
-  const filterParams = id => {
-    searchParams.set('cate_id', id);
-    searchParams.set('sweetness', id);
-
+  const filterParams = (id, name) => {
+    searchParams.set(name, id);
     setSearchParams(searchParams);
+    console.log('test');
   };
   return (
     <div className="drop-down-wrapper">
@@ -32,13 +28,14 @@ const Dropdown = () => {
           <div className="filter-content">
             {filterItem.type.map(type => (
               //내용 버튼 내용 버튼
-              <div className="filter-item-box" key={type.id}>
+              <div
+                className="filter-item-box"
+                key={type.id}
+                onClick={() => filterParams(type.id, type.name)}
+              >
                 <div className="filter-item-wrapper">
                   <div className="filter-item">
-                    <button
-                      className="filter-item-btn"
-                      onClick={() => filterParams(type.id)}
-                    >
+                    <button className="filter-item-btn">
                       <p className="filter-item-text">{type.option}</p>
                     </button>
                   </div>
@@ -59,19 +56,19 @@ const filterList = [
     id: 0,
     title: '주종',
     type: [
-      { id: 1, option: '탁주' },
-      { id: 2, option: '청주' },
-      { id: 3, option: '과실주' },
-      { id: 4, option: '증류주' },
+      { id: 1, option: '탁주', name: 'cate_id' },
+      { id: 2, option: '청주', name: 'cate_id' },
+      { id: 3, option: '과실주', name: 'cate_id' },
+      { id: 4, option: '증류주', name: 'cate_id' },
     ],
   },
   {
     id: 1,
     title: '단맛',
     type: [
-      { id: 1, option: '약' },
-      { id: 2, option: '중' },
-      { id: 3, option: '강' },
+      { id: 1, option: '약', name: 'sweetness' },
+      { id: 2, option: '중', name: 'sweetness' },
+      { id: 3, option: '강', name: 'sweetness' },
     ],
   },
   {
@@ -139,7 +136,7 @@ const filterList = [
     id: 8,
     title: '가격',
     type: [
-      { id: 1, option: '~ 1만원' },
+      { id: 1, option: '~ 1만원', name: 'price' },
       { id: 2, option: '1만원 ~ 3만원' },
       { id: 3, option: '3만원 ~ 5만원' },
       { id: 4, option: '5만원 ~ 10만원' },

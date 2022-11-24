@@ -8,8 +8,10 @@ import ProductMenu from './Component/Head/ProductMenu';
 import './ProductList.scss';
 
 const ProductList = () => {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [data, setData] = useState([]);
+
+  console.log(searchParams.toString());
 
   useEffect(() => {
     fetch(`http://10.58.52.122:3000/products/?${searchParams.toString()}`, {
@@ -28,7 +30,10 @@ const ProductList = () => {
           </div>
           {/* 필터 */}
           <div className="product-filter-box">
-            <Dropdown />
+            <Dropdown
+              searchParams={searchParams}
+              setSearchParams={setSearchParams}
+            />
           </div>
 
           {/* 회색줄 */}
