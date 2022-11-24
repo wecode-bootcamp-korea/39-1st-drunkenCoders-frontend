@@ -3,14 +3,19 @@ import './Dropdown.scss';
 
 const Dropdown = ({ searchParams, setSearchParams }) => {
   const [openList, setOpenList] = useState(false);
+  // const closeBtn = setOpenList(true);
+  // const openBtn = setOpenList(false);
 
   //참
-  // const toggleHandler = () => {
-  //   setOpenList(!openList);
-  // };
+  const toggleHandler = () => {
+    setOpenList(!openList);
+  };
   const filterParams = (id, name) => {
-    searchParams.set(name, id);
+    searchParams.append(name, id);
     setSearchParams(searchParams);
+    // setOpenList(!openList);
+
+    // true || flase;
   };
   return (
     <div className="drop-down-wrapper">
@@ -18,10 +23,8 @@ const Dropdown = ({ searchParams, setSearchParams }) => {
         //필터 버튼
         <button
           key={filterItem.id}
-          className={
-            openList === filterItem.id ? 'filter-btn active' : 'filter-btn'
-          }
-          onClick={() => setOpenList(filterItem.id)}
+          className={!openList ? 'filter-btn active' : 'filter-btn'}
+          onClick={toggleHandler}
         >
           {filterItem.title}
           <div className="filter-content">

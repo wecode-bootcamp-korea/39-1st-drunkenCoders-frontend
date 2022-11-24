@@ -9,10 +9,7 @@ import ProductList from './pages/ProductList/ProductList';
 import Register from './pages/Register/Register';
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
-<<<<<<< HEAD
 
-=======
->>>>>>> main
 function Router() {
   return (
     <BrowserRouter>
