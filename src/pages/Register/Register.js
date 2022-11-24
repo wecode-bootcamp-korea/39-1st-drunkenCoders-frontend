@@ -98,8 +98,8 @@ const Register = () => {
   };
 
   return (
-    <div className="all-container">
-      <div className="container">
+    <div className="container type-login">
+      <div className="contents">
         <h4 className="signup">회원가입</h4>
         <img className="iconsignup" src={iconsignup} alt="회원가입 아이콘" />
 

@@ -1,9 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
 import Banner from './../Main/component/Banner/Banner';
 import Review from './../Main/component/Review/Review';
 import LinkList from './component/LinkList/LinkList';
 import Timer from './../Main/component/Timer/Timer';
+import ProductItem from '../ProductList/Component/Body/ProductItem';
 import iconPick from './../../assets/Main/icon_pick.png';
 import iconClock from './../../assets/Main/icon_clock.png';
 import iconOmija from './../../assets/Main/icon_omija.png';
@@ -13,6 +14,16 @@ import iconStar from './../../assets/Main/icon_star.png';
 import './Main.scss';
 
 const Main = () => {
+  const [searchParams] = useSearchParams();
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://10.58.52.122:3000/products/?${searchParams.toString()}`, {
+      method: 'GET',
+    })
+      .then(response => response.json())
+      .then(result => setData(result.data));
+  }, [searchParams]);
   return (
     <div className="container">
       <div className="main-wrap">
@@ -33,7 +44,9 @@ const Main = () => {
               더보기
             </Link>
           </div>
-          <div className="product-list" />
+          <div className="product-list">
+            <ProductItem data={data} />
+          </div>
         </div>
 
         <div className="main-section">
@@ -46,7 +59,7 @@ const Main = () => {
               <Timer hh="40" mm="40" ss="25" />
             </h3>
           </div>
-          <Link to="/productDetail" className="main-banner">
+          <Link to="/productList" className="main-banner">
             <div className="thumb">
               <img src="/images/cat.jpeg" alt="샘플" />
             </div>
@@ -94,7 +107,9 @@ const Main = () => {
               더보기
             </Link>
           </div>
-          <div className="product-list" />
+          <div className="product-list">
+            <ProductItem data={data} />
+          </div>
         </div>
 
         <div className="main-section">
@@ -110,7 +125,9 @@ const Main = () => {
               더보기
             </Link>
           </div>
-          <div className="product-list" />
+          <div className="product-list">
+            <ProductItem data={data} />
+          </div>
         </div>
 
         <div className="main-section type-center">

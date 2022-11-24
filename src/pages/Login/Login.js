@@ -46,7 +46,6 @@ const Login = () => {
       });
   };
 
-  // 구조분해할당
   const { userId, userPassword } = userInfo;
 
   const isInputValid = userId.includes('@') && PW_REG_EXP.test(userPassword);
