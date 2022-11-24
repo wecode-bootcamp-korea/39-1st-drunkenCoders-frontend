@@ -1,15 +1,20 @@
 import React from 'react';
-// import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import './ProductItem.scss';
 
 const ProductItem = ({ data }) => {
+  const naviDetail = useNavigate();
+
+  const goToDetail = () => {
+    naviDetail('/productDetail/1');
+  };
   return (
     <>
       {/* 제품 전체 박스 */}
       {data.map(item => (
         <div className="product-info-box" key={item.id}>
           <div className="product-info">
-            <a href="www.naver.com" className="product-link">
+            <a className="product-link" onClick={goToDetail}>
               <div className="image-wrapper">
                 <span className="">
                   <span />
