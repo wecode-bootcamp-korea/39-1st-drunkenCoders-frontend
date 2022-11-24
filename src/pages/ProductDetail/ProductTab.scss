@@ -1,0 +1,40 @@
+.tab {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
+  .tab-menu {
+    display: flex;
+    justify-content: center;
+
+    .tabtab {
+      margin-right: 15px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #0097f3;
+      color: white;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 15px;
+    }
+
+    .btn-white {
+      border: 1px solid #bbb;
+      background-color: white;
+      color: black;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 15px;
+    }
+  }
+
+  .tab-content {
+    width: 400px;
+  }
+}

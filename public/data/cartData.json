@@ -1,0 +1,29 @@
+[
+  {
+    "productId": 0,
+    "productName": "문희 오미자 가향주",
+    "productPrice": 26000,
+    "img": "./images/kunwooSample/sample.png",
+    "sub": "[500ml] 문희 오미자 가향주",
+    "basketId": 1,
+    "amount": 1
+  },
+  {
+    "productId": 1,
+    "productName": "따봉 캣",
+    "productPrice": 36000,
+    "img": "./images/kunwooSample/cat.jpg",
+    "sub": "아주 따봉따봉",
+    "basketId": 2,
+    "amount": 1
+  },
+  {
+    "productId": 2,
+    "productName": "곰 앤 나 사이",
+    "productPrice": 36000,
+    "img": "./images/kunwooSample/gom.jpeg",
+    "sub": "곰곰곰",
+    "basketId": 3,
+    "amount": 1
+  }
+]

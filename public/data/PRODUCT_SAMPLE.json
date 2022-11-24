@@ -1,0 +1,37 @@
+[
+  {
+    "id": 0,
+    "productName": "문희 오미자 가향주",
+    "productSub": "문경 오미자가 들어간 프리미엄 탁주",
+    "hashTag": "#오미자 새콤달콤 #모든 과정 수제",
+    "width": "100%",
+    "review": "[4리뷰]",
+    "kind": "탁주",
+    "alchol": "12%",
+    "ml": "500ml",
+    "delivery": "배송기간 : 월/수/금요일 출고 (2일 이내 배송)",
+    "price": "26,000",
+    "detail_img1": "/images/kunwooSample/sampleE.png",
+    "detail_img2": "/images/kunwooSample/smple.png",
+    "detail_img3": "/images/kunwooSample/sssample.png",
+    "detail_img4": "/images/kunwooSample/white.png",
+    "tap_img": "/images/kunwooSample/productInfo.png"
+  },
+  {
+    "id": 1,
+    "productName": "문희 오미자 가향주",
+    "productSub": "문경 오미자가 들어간 프리미엄 탁주",
+    "hashTag": "#오미자 새콤달콤 #모든 과정 수제",
+    "width": "100%",
+    "kind": "탁주",
+    "alchol": "12%",
+    "ml": "500ml",
+    "delivery": "배송기간 : 월/수/금요일 출고 (2일 이내 배송)",
+    "price": "26000",
+    "detail_img1": "/images/kunwooSample/sampleE.png",
+    "detail_img2": "/images/kunwooSample/smple.png",
+    "detail_img3": "/images/kunwooSample/sssample.png",
+    "detail_img4": "/images/kunwooSample/white.png",
+    "tap_img": "/images/kunwooSample/change.png"
+  }
+]
