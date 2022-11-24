@@ -100,6 +100,27 @@
             background: #444;
           }
         }
+
+        &.arrow {
+          position: relative;
+          color: #296dea;
+          font-weight: bold;
+          &:after {
+            content: '';
+            display: inline-block;
+            margin-left: 2px;
+            width: 6px;
+            height: 6px;
+            vertical-align: 2px;
+            border-top: 2px solid #296dea;
+            border-right: 2px solid #296dea;
+            transform: rotate(45deg);
+          }
+        }
+
+        &.gray {
+          color: #999;
+        }
       }
     }
   }

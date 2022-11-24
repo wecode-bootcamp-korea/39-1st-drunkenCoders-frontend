@@ -11,8 +11,6 @@ const ProductList = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [data, setData] = useState([]);
 
-  console.log(searchParams.toString());
-
   useEffect(() => {
     fetch(`http://10.58.52.122:3000/products/?${searchParams.toString()}`, {
       method: 'GET',

@@ -4,6 +4,9 @@ import Sns from './component/Sns';
 import './Footer.scss';
 
 const Footer = () => {
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <div className="footer">
       <div className="inner">
@@ -62,6 +65,9 @@ const Footer = () => {
           서비스가입사실 확인
         </a>
       </div>
+      <button type="button" className="btn-top" onClick={scrollTop}>
+        <span>TOP</span>
+      </button>
     </div>
   );
 };

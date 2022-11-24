@@ -11,7 +11,6 @@ const Dropdown = ({ searchParams, setSearchParams }) => {
   const filterParams = (id, name) => {
     searchParams.set(name, id);
     setSearchParams(searchParams);
-    console.log('test');
   };
   return (
     <div className="drop-down-wrapper">
