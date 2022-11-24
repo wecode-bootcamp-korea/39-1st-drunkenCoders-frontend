@@ -1,0 +1,50 @@
+.main-link-area {
+  padding: 30px 0;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  a {
+    display: inline-block;
+    margin-left: 30px;
+    padding-top: 50px;
+    min-width: 78px;
+    font-size: 12px;
+    text-align: center;
+    &.icon1 {
+      margin-left: 0;
+      background: url(/assets/Main/icon_takju.png) no-repeat center top;
+      background-size: 44px;
+    }
+    &.icon2 {
+      background: url(/assets/Main/icon_cheongju.png) no-repeat center top;
+      background-size: 44px;
+    }
+    &.icon3 {
+      background: url(/assets/Main/icon_gwashilju.png) no-repeat center top;
+      background-size: 44px;
+    }
+    &.icon4 {
+      background: url(/assets/Main/icon_jeungryuju.png) no-repeat center top;
+      background-size: 44px;
+    }
+    &.icon5 {
+      background: url(/assets/Main/icon_gift.png) no-repeat center top;
+      background-size: 44px;
+    }
+    &.icon6 {
+      background: url(/assets/Main/icon_only_sooldamhwa.png) no-repeat center
+        top;
+      background-size: 44px;
+    }
+    &.icon7 {
+      background: url(/assets/Main/icon_event.png) no-repeat center top;
+      background-size: 44px;
+    }
+    &.icon8 {
+      background: url(/assets/Main/icon_bizgift.png) no-repeat center top;
+      background-size: 44px;
+    }
+  }
+  & + .main-section {
+    margin-top: 50px;
+  }
+}

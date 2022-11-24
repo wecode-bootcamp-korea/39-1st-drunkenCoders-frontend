@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import iconKakao from './../../assets/login/icon_kakao.png';
-import iconNaver from './../../assets/login/icon_naver.png';
-import iconGoogle from './../../assets/login/icon_google.png';
+import iconKakao from './../../assets/Login/icon_kakao.png';
+import iconNaver from './../../assets/Login/icon_naver.png';
+import iconGoogle from './../../assets/Login/icon_google.png';
 import './Login.scss';
 
 const PW_REG_EXP =
@@ -16,18 +16,11 @@ const Login = () => {
   });
 
   const getUserInfo = e => {
-    // 구조분해할당
-    // const name = e.target.name;
-    // const value = e.target.value;
     const { name, value } = e.target;
-
-    // 계산된 속성명
-    // spread operator
     setUserInfo({ ...userInfo, [name]: value });
   };
 
   const handleLogin = e => {
-    // form tag의 submit 동작을 방지하기 위해 기본 동작을 막아줌
     e.preventDefault();
 
     fetch('http://10.58.52.65:3000/users/login', {
@@ -39,14 +32,11 @@ const Login = () => {
       }),
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
-        // westudy 참고!
-        // 'Content-type' :
       },
     })
       .then(res => res.json())
       .then(data => {
         console.log(data);
-        // 백엔드가 보내주는 메시지를 토대로 분기처리
         if (data.accessToken) {
           localStorage.setItem('token', data.accessToken);
           navigate('/main');
@@ -63,7 +53,6 @@ const Login = () => {
 
   return (
     <div className="login">
-      {/* <div className="login-container"> */}
       <h4 className="title-login">로그인</h4>
 
       <div className="login-form">

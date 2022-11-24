@@ -1,45 +1,186 @@
-// 팀원과 상의 후 common에 넣으면 좋음(어차피 프로젝트 내의 다른 input들도 유사한 레이아웃일 것이기 때문!
-.container {
-  text-align: center;
-}
+.all-container {
+  .container {
+    display: flex;
+    flex: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-input {
-  outline: none;
-}
-
-.signup {
-  color: #ffba00;
-  margin: 0 0 20px;
-  font-size: 18x;
-  font-weight: bold;
-  margin-bottom: 70px;
-  text-decoration-line: none;
-}
-
-.iconsignup {
-  width: 160px;
-  height: 160px;
-  margin-bottom: 70px;
-}
-
-.title-email,
-.title-pw,
-.check-pw,
-.nickname {
-  font-size: 16px;
-  color: rgb(255, 186, 0);
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.register-input {
-  &:focus {
-    border-bottom: red;
+    .signup {
+      color: #ffba00;
+      margin-bottom: 70px;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration-line: none;
+    }
+    .iconsignup {
+      width: 160px;
+      height: 160px;
+      margin-bottom: 70px;
+    }
   }
 
-  &:hover {
+  .signup-form {
+    text-align: center;
+    .form-wrap {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      width: 400px;
+      label {
+        color: #ffba00;
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 20px;
+      }
+      input {
+        height: 40px;
+        width: 100%;
+        border-bottom: 1px solid #666;
+        text-align: center;
+        font-size: 16px;
+
+        &:focus {
+          outline: none;
+          border-bottom: 1px solid blue;
+        }
+
+        &.error {
+          border-bottom: 1px solid red;
+
+          &:focus {
+            border-bottom: 1px solid red;
+          }
+          & ~ .alert-txt {
+            display: block;
+          }
+        }
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+      .alert-txt {
+        display: none;
+        margin-top: 10px;
+        color: red;
+      }
+      .check-repeat {
+        font-size: 14px;
+        font-weight: bold;
+        color: #666;
+        position: absolute;
+        right: 5px;
+        top: 57px;
+        text-decoration: underline;
+      }
+    }
+    .check-adult {
+      color: yellow;
+      border: none;
+      width: 220px;
+      height: 43px;
+      background-color: rgb(255, 186, 0);
+      color: rgb(255, 255, 255);
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+    .alert-name {
+      color: #cfcfcf;
+      padding-top: 20px;
+    }
+    select {
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      background-color: none;
+      font-family: inherit;
+      border-bottom: 1px solid black;
+      padding: 5px 0px;
+    }
+
+    .agreement {
+      padding: 10px;
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #666;
+      margin-bottom: 10px;
+      span.blue {
+        color: #299ff4;
+      }
+      span.red {
+        color: #f88c8b;
+      }
+    }
   }
 
-  &:disabled {
+  .agreement-checkbox {
+    text-align: right;
+  }
+
+  .submit-btn {
+    width: 130px;
+    height: 40px;
+    font-size: 15px;
+    margin-top: 40px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    color: black;
+
+    &:disabled {
+      opacity: 0.3;
+    }
+  }
+
+  .nickname-repeat {
+    position: relative;
+    .container {
+      text-align: center;
+    }
+
+    input {
+      outline: none;
+    }
+
+    .signup {
+      color: #ffba00;
+      margin: 0 0 20px;
+      font-size: 18x;
+      font-weight: bold;
+      margin-bottom: 70px;
+      text-decoration-line: none;
+    }
+
+    .iconsignup {
+      width: 160px;
+      height: 160px;
+      margin-bottom: 70px;
+    }
+
+    .title-email,
+    .title-pw,
+    .check-pw,
+    .nickname {
+      font-size: 16px;
+      color: rgb(255, 186, 0);
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .register-input {
+      &:focus {
+        border-bottom: red;
+      }
+
+      &:hover {
+      }
+
+      &:disabled {
+      }
+    }
   }
 }

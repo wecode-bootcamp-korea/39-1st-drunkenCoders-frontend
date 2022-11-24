@@ -1,0 +1,205 @@
+.main-wrap {
+  .main-section {
+    .section-tit {
+      position: relative;
+      display: flex;
+      margin-bottom: 30px;
+      .icon {
+        margin-right: 10px;
+        width: 40px;
+        img {
+          margin-top: -4px;
+        }
+      }
+      .tit {
+        strong {
+          font-size: 22px;
+          font-weight: bold;
+          & + span {
+            margin-top: 5px;
+          }
+        }
+        > span {
+          display: inline-block;
+          width: 100%;
+          color: #ffb43b;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        .time {
+          position: relative;
+          display: inline-block;
+          margin-left: 10px;
+          padding-left: 11px;
+          vertical-align: 2px;
+          span {
+            font-size: 18px;
+            font-weight: bold;
+            &.sub-txt {
+              margin-left: 8px;
+              font-size: 14px;
+              font-weight: normal;
+              vertical-align: 1px;
+            }
+          }
+          &:before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 0;
+            width: 1px;
+            height: calc(100% - 8px);
+            background: #000;
+          }
+        }
+      }
+      .btn-txt {
+        position: absolute;
+        bottom: 5px;
+        right: 0;
+        color: #296dea;
+        font-weight: bold;
+        &:after {
+          content: '';
+          display: inline-block;
+          margin-left: 3px;
+          width: 5px;
+          height: 5px;
+          vertical-align: 2px;
+          border-top: 2px solid #296dea;
+          border-right: 2px solid #296dea;
+          transform: rotate(45deg);
+        }
+      }
+    }
+    .main-banner {
+      display: flex;
+      height: 360px;
+      border-radius: 12px;
+      background: #3e3e3e;
+      overflow: hidden;
+      .thumb {
+        width: 36%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .info-area {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 64%;
+        .product {
+          width: 55%;
+          .tag {
+            display: inline-block;
+            padding: 0 6px;
+            line-height: 24px;
+            color: #fff;
+            font-size: 12px;
+            border-radius: 4px;
+            &.red {
+              background: #d33939;
+            }
+          }
+          .txt {
+            margin-top: 6px;
+            color: #c4c4c4;
+          }
+          .tit {
+            color: #fff;
+            margin-top: 6px;
+            font-size: 18px;
+            font-weight: bold;
+          }
+          .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #707070;
+            .review-area {
+              li {
+                position: relative;
+                display: inline-block;
+                margin-left: 10px;
+                padding-left: 11px;
+                color: #fff;
+                img {
+                  margin-right: 4px;
+                  width: 16px;
+                  vertical-align: -2px;
+                }
+                span {
+                  font-weight: bold;
+                }
+                &:first-child {
+                  margin-left: 0;
+                  padding-left: 0;
+                  &:before {
+                    display: none;
+                  }
+                }
+                &:before {
+                  content: '';
+                  position: absolute;
+                  top: 3px;
+                  left: 0;
+                  width: 1px;
+                  height: calc(100% - 6px);
+                  background: #b2b2b2;
+                }
+              }
+            }
+            .price-area {
+              display: flex;
+              align-items: center;
+              .price {
+                display: inline-block;
+                margin-right: 12px;
+                color: #b2b2b2;
+                font-size: 18px;
+                text-decoration: line-through;
+              }
+              .discount-price {
+                display: inline-block;
+                color: #fff;
+                font-size: 24px;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.type-center {
+      .section-tit {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        .icon {
+          margin: 0 auto 10px;
+        }
+        .tit {
+          strong {
+            font-size: 18px;
+          }
+          > span {
+            font-size: 14px;
+            & + strong {
+              display: block;
+              margin-top: 15px;
+            }
+          }
+        }
+      }
+    }
+    & + .main-section {
+      margin-top: 100px;
+    }
+  }
+}

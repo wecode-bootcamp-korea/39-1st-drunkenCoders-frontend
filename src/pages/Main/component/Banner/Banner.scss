@@ -1,0 +1,55 @@
+.banner-slider {
+  position: relative;
+  margin: 0 -360px;
+  overflow: hidden;
+  .slider-box {
+    display: flex;
+    .slide {
+      flex: none;
+      width: 100%;
+      img {
+      }
+    }
+  }
+  .slide-btn {
+    button {
+      position: absolute;
+      top: 50%;
+      width: 50px;
+      height: 50px;
+      text-indent: -9999px;
+      background: #000;
+      transform: translateY(-50%);
+      z-index: 1;
+      &.btn-prev {
+        left: 360px;
+        background: url(/assets/Main/icon_prev.png) no-repeat center;
+        background-size: 50px;
+      }
+      &.btn-next {
+        right: 360px;
+        background: url(/assets/Main/icon_next.png) no-repeat center;
+        background-size: 50px;
+      }
+    }
+  }
+  .slide-pagination {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    padding: 0 10px;
+    color: #fff;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateX(-50%);
+    span {
+      display: inline-block;
+      margin: 0 3px;
+      line-height: 24px;
+      font-size: 12px;
+      &.current {
+        font-weight: bold;
+      }
+    }
+  }
+}
