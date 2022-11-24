@@ -17,6 +17,7 @@ const Login = () => {
 
   const getUserInfo = e => {
     const { name, value } = e.target;
+
     setUserInfo({ ...userInfo, [name]: value });
   };
 
@@ -26,7 +27,6 @@ const Login = () => {
     fetch('http://10.58.52.65:3000/users/login', {
       method: 'POST',
       body: JSON.stringify({
-        // id, pw key값 맞춰서 통신하기
         email: userInfo.userId,
         password: userInfo.userPassword,
       }),
@@ -46,7 +46,6 @@ const Login = () => {
       });
   };
 
-  // 구조분해할당
   const { userId, userPassword } = userInfo;
 
   const isInputValid = userId.includes('@') && PW_REG_EXP.test(userPassword);

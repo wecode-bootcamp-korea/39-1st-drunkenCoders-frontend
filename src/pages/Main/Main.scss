@@ -175,6 +175,17 @@
         }
       }
     }
+    .product-list {
+      margin-left: -16px;
+      overflow: hidden;
+      .product-info-box {
+        display: inline-block;
+        width: 25%;
+        &:nth-child(n + 5) {
+          display: none;
+        }
+      }
+    }
 
     &.type-center {
       .section-tit {
