@@ -5,15 +5,14 @@ import './Review.scss';
 const Review = ({ productData }) => {
   const { productId } = useParams();
   const [currReviewId, setCurrReviewId] = useState([]);
-  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
-    fetch(`http://10.58.52.122:3000/comments/${productId}`, {
+    fetch(`http://10.58.52.122:3000/comments/product?productId=1`, {
       method: 'GET',
     })
       .then(response => response.json())
       .then(data => setCurrReviewId(data.data));
-  }, [setSearchParams]);
+  }, []);
 
   return (
     <div className="Review">

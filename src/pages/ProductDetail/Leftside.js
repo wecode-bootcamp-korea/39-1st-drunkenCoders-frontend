@@ -4,15 +4,11 @@ import ProductTab from './ProductTab';
 import Review from './Review';
 import './Leftside.scss';
 
-const Leftside = ({ productData, searchParams, setSearchParams }) => {
+const Leftside = ({ productData }) => {
   const [slideClick, setSlideClick] = useState(false);
 
   const handleToggle = () => {
     setSlideClick(!slideClick);
-  };
-  const filterParams = (id, name) => {
-    searchParams.set(name, id);
-    setSearchParams(searchParams);
   };
 
   return (
