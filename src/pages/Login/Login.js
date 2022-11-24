@@ -27,7 +27,6 @@ const Login = () => {
     fetch('http://10.58.52.65:3000/users/login', {
       method: 'POST',
       body: JSON.stringify({
-        // id, pw key값 맞춰서 통신하기
         email: userInfo.userId,
         password: userInfo.userPassword,
       }),
@@ -40,7 +39,7 @@ const Login = () => {
         console.log(data);
         if (data.accessToken) {
           localStorage.setItem('token', data.accessToken);
-          navigate('/main');
+          navigate('/');
         } else {
           alert('아이디와 비밀번호를 확인해주세요!');
         }
