@@ -18,15 +18,13 @@ const ProductDetail = () => {
 
   if (Object.keys(productData).length === 0) return null;
   return (
-    <>
-      <div className="container">
-        <div className="detail-main">
-          <Leftside productData={productData} />
+    <div className="container">
+      <div className="detail-main">
+        <Leftside productData={productData} />
 
-          <Rightside productData={productData} />
-        </div>
+        <Rightside productData={productData} />
       </div>
-    </>
+    </div>
   );
 };
 
