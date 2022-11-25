@@ -16,8 +16,12 @@ const Cart = () => {
   // };
   useEffect(() => {
     // mock data fetch
-    fetch(`http://10.58.52.128:3000/carts/${productId}`, {
+    fetch(`http://10.58.52.122:3000/carts`, {
       method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('token'),
+      },
     })
       .then(res => res.json())
       .then(data => {
@@ -75,7 +79,7 @@ const Cart = () => {
                 //   setCartItemList(deletedItem);
                 // }}
                 //백앤드 연결시 아래코드로 대체
-                fetch(`http://10.58.52.128:3000/carts/1`, {
+                fetch(`http://10.58.52.128:3000/carts`, {
                   method: 'DELETE',
                   headers: {
                     'Content-Type': 'application/json;charset=utf-8',

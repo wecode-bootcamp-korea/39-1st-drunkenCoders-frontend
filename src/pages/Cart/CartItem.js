@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CartItem = ({ itemInfo, cartItemList, setCartItemList, deleteItem }) => {
-  const { product_id, name, price, detail_image, sub, id, quantity } = itemInfo;
+  const { product_id, name, price, image_url, sub, id, quantity } = itemInfo;
 
   const totalPrice = price * quantity;
 
@@ -49,7 +49,7 @@ const CartItem = ({ itemInfo, cartItemList, setCartItemList, deleteItem }) => {
             </div>
             <div className="product-info-top">
               <div className="thumbnail">
-                <img className="thumbnail-img" src={detail_image} />
+                <img className="thumbnail-img" src={image_url} />
               </div>
               <div className="product-name">{name}</div>
               <button

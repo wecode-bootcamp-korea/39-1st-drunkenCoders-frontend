@@ -24,7 +24,7 @@ const Login = () => {
   const handleLogin = e => {
     e.preventDefault();
 
-    fetch('http://10.58.52.65:3000/users/login', {
+    fetch('http://10.58.52.122:3000/users/login', {
       method: 'POST',
       body: JSON.stringify({
         email: userInfo.userId,
@@ -39,7 +39,7 @@ const Login = () => {
         console.log(data);
         if (data.accessToken) {
           localStorage.setItem('token', data.accessToken);
-          navigate('/main');
+          window.location.replace('/');
         } else {
           alert('아이디와 비밀번호를 확인해주세요!');
         }

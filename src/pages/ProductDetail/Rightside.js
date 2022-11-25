@@ -9,15 +9,15 @@ const Rightside = ({ productData }) => {
 
   const onClickCart = () => {
     //장바구니 담는 로직(fetch)
-    fetch('http://10.58.52.128:3000/carts', {
+    fetch('http://10.58.52.122:3000/carts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        // 'Content-Type': 'application/x-www-form-urlencoded',
+        Authorization: localStorage.getItem('token'),
       },
       body: JSON.stringify({
-        //이름 , 개수 , 가격
-        product_id: productId,
+        productId: productId,
+
         quantity: count,
       }),
     })
@@ -36,7 +36,8 @@ const Rightside = ({ productData }) => {
         }
       });
   };
-
+  console.log(productId);
+  console.log(count);
   const totalPrice = productData.price * count;
   const minusCount = () => {
     if (count <= 1) {

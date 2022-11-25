@@ -49,7 +49,7 @@ const Register = () => {
     idValueChecked && pwValueChecked && pwRepeatChecked && !isDuplicate;
 
   const handleSignup = () => {
-    fetch('http://10.58.52.65:3000/users/register', {
+    fetch('http://10.58.52.122:3000/users/register', {
       method: 'POST',
       body: JSON.stringify({
         email: userInfo.useremail,
@@ -78,7 +78,7 @@ const Register = () => {
       alert('닉네임을 입력해주세요!');
       return;
     }
-    fetch(`http://10.58.52.65:3000/users/${userInfo.usernickname}`, {
+    fetch(`http://10.58.52.122:3000/users/${userInfo.usernickname}`, {
       method: 'get',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
