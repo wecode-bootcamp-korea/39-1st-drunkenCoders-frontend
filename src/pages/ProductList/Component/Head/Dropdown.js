@@ -7,18 +7,22 @@ const Dropdown = ({ searchParams, setSearchParams }) => {
   const toggleHandler = () => {
     setOpenList(!openList);
   };
+
   const filterParams = (id, name) => {
     searchParams.append(name, id);
     setSearchParams(searchParams);
   };
+
   return (
     <div className="drop-down-wrapper">
       {filterList.map(filterItem => (
         //필터 버튼
         <button
           key={filterItem.id}
-          className={!openList ? 'filter-btn active' : 'filter-btn'}
-          onClick={toggleHandler}
+          className={
+            openList === filterItem.id ? 'filter-btn active' : 'filter-btn'
+          }
+          onClick={() => setOpenList(filterItem.id)}
         >
           {filterItem.title}
           <div className="filter-content">

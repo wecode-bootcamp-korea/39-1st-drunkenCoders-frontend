@@ -9,7 +9,7 @@ const ProductItem = ({ data }) => {
       {data.map(item => (
         <div className="product-info-box" key={item.id}>
           <div className="product-info">
-            <a href="wwww.naver.com" className="product-link">
+            <a href="" className="product-link">
               <div className="image-wrapper">
                 <span className="">
                   <span />
@@ -20,6 +20,7 @@ const ProductItem = ({ data }) => {
                   />
                 </span>
               </div>
+
               {/* 제품 설명 */}
 
               <div className="product-content-box">
