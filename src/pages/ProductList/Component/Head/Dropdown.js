@@ -2,10 +2,15 @@ import React, { useState } from 'react';
 import './Dropdown.scss';
 
 const Dropdown = ({ searchParams, setSearchParams }) => {
-  const [openList, setOpenList] = useState(false);
+  // const [openList, setOpenList] = useState(false);
+  const [currTabId, setCurrTabId] = useState();
 
-  const toggleHandler = () => {
-    setOpenList(!openList);
+  const toggleHandler = id => {
+    if (currTabId === id) {
+      setCurrTabId();
+    } else {
+      setCurrTabId(id);
+    }
   };
 
   const filterParams = (id, name) => {
@@ -20,9 +25,9 @@ const Dropdown = ({ searchParams, setSearchParams }) => {
         <button
           key={filterItem.id}
           className={
-            openList === filterItem.id ? 'filter-btn active' : 'filter-btn'
+            currTabId === filterItem.id ? 'filter-btn active' : 'filter-btn'
           }
-          onClick={() => setOpenList(filterItem.id)}
+          onClick={() => toggleHandler(filterItem.id)}
         >
           {filterItem.title}
           <div className="filter-content">

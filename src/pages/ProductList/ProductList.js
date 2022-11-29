@@ -12,7 +12,7 @@ const ProductList = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`http://10.58.52.122:3000/products/?${searchParams.toString()}`, {
+    fetch(`http://10.58.52.92/products/?${searchParams.toString()}`, {
       method: 'GET',
     })
       .then(response => response.json())
